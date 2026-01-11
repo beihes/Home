@@ -1,0 +1,41 @@
+{
+    "keyMap": {
+        "FullScreen": [
+            "F11"
+        ],
+        "Jump": [
+            "SPACE"
+        ],
+        "MoveDown": [
+            "S",
+            "DOWN"
+        ],
+        "MoveLeft": [
+            "A",
+            "LEFT"
+        ],
+        "MoveRight": [
+            "D",
+            "RIGHT"
+        ],
+        "MoveUp": [
+            "W",
+            "UP"
+        ],
+        "Quit": [
+            "ESCAPE"
+        ]
+    },
+    "render": {
+        "enableVSync": true,
+        "fps": 100
+    },
+    "window": {
+        "h": 600,
+        "isFullScreen": false,
+        "title": "Engin Test Application",
+        "w": 800,
+        "x": 100,
+        "y": 100
+    }
+}

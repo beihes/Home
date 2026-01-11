@@ -1,0 +1,30 @@
+# Visual Studio cache and generated files
+.vs/
+out/
+CMakeCache.txt
+CMakeFiles/
+*.VC.db*
+*.opendb
+*.ipch
+*.pdb
+*.obj
+*.dll
+*.exe
+*.ilk
+*.idb
+*.manifest
+*.res
+
+# CMake API files
+**/.cmake/
+
+# Local user-specific files
+*.user
+*.suo
+
+# Copilot auto-generated files
+**/CopilotIndices/
+
+# DirectX shader cache (if any)
+*.cso
+*.cache
