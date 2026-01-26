@@ -115,7 +115,7 @@ namespace engine::component {
         SDL_Point mapSize_;                     ///< @brief 地图尺寸（瓦片数）
         std::vector<TileInfo> tiles_;           ///< @brief 存储所有瓦片信息 (按"行主序"存储, index = y * map_width_ + x)
         SDL_FPoint offset_ = { 0.0f, 0.0f };    ///< @brief 瓦片层在世界中的偏移量 (瓦片层通常不需要缩放及旋转，因此不引入Transform组件)
-                                                    // offset_ 最好也保持默认的0，以免增加不必要的复杂性
+        // offset_ 最好也保持默认的0，以免增加不必要的复杂性
         bool isHidden_ = false;                 ///< @brief 是否隐藏（不渲染）
         physics::PhysicsEngine* physicsEngine_ = nullptr;   ///< @brief 物理引擎的指针， clean()函数中可能需要反注册
     private:

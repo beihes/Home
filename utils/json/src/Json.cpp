@@ -3,6 +3,14 @@
 #include "utils/log/inc/Log.h"
 namespace utils::json
 {
+    void Init() noexcept {
+        cJSON_Hooks hooks;
+        hooks.malloc_fn = SDL_malloc;
+        hooks.free_fn = SDL_free;
+        cJSON_InitHooks(&hooks);
+        log::Trace("json模块初始化完成");
+    }
+
     Json::Json() {
         this->data_ = cJSON_CreateObject();
     }

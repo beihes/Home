@@ -15,22 +15,21 @@ extern "C" {
 #include <box2d/box2d.h>
 
 namespace engine::object {
-	class Object;
+    class Object;
 }
 
 namespace engine::physics {
-	class PhysicsEngine;
+    class PhysicsEngine;
 }
 
-namespace engine::component
-{
+namespace engine::component {
     class ColliderComponent final : public Component {
         friend class object::Object;
     public:
         ColliderComponent() = default;
         ~ColliderComponent() override = default;
     public:
-         // 删除复制/移动操作
+        // 删除复制/移动操作
         ColliderComponent(const ColliderComponent&) = delete;
         ColliderComponent& operator=(const ColliderComponent&) = delete;
         ColliderComponent(ColliderComponent&&) = delete;

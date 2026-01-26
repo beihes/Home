@@ -4,6 +4,9 @@
 
 set(CMAKE_PROJECT_NAME utils)
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 file(GLOB_RECURSE UTILS_INCLUDE
     "*.h"
     "*.hpp"
@@ -24,11 +27,10 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 find_package(cJSON CONFIG REQUIRED)
 find_package(CURL REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
-find_package(fmt CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(SDL3 CONFIG REQUIRED)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     cjson cjson_utils 
-    CURL::libcurl EnTT::EnTT fmt::fmt imgui::imgui
+    CURL::libcurl EnTT::EnTT imgui::imgui
     SDL3::SDL3)

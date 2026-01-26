@@ -18,14 +18,19 @@ namespace app::school {
     class Student {
     public:
         Student() = default;
-        Student(const std::string& id, const std::string& name);
+        Student(const std::string& studentNumber, const std::string& password);
         ~Student() = default;
     public:
         void enroll(Course* course);
         void setScore(Exam* exam, int score);
+        void GetData_FormWeb();
     private:
-        std::string studentId_;
+        std::string studentNumber_;
+        std::string password_;
         std::string name_;
+        std::string term_;
+        std::string userId_;
+        std::string token_;
         std::vector<Course*> courses_;
         std::unordered_map<Exam*, int> scores_;
     };

@@ -37,8 +37,13 @@ namespace app::school {
     private:
         std::string courseId_;
         std::string name_;
+        std::string categoryCode;   /* @brief 课程类别代码（如：C1、C2） */
         int credit_;
         Teacher* teacher_;
         std::vector<Exam*> exams_;
+        double hours;           /* @brief 课程学时 */
+        double credits;         /* @brief 课程学分 */
+        std::string studyType;  /* @brief 学习方式（如：必修、选修） */
+        std::vector<std::string> teachers; /* @brief 授课教师 */
     };
 }

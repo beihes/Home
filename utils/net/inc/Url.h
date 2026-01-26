@@ -2,6 +2,7 @@
 
 #include <string>
 #include <memory>
+#include <unordered_map>
 
 typedef void CURL;
 struct curl_slist;
@@ -21,6 +22,7 @@ namespace utils::net {
         Url& operator=(Url&& other) noexcept;
     public:
         void Insert_Header(const std::string& first, const std::string& second);/* 插入请求头 */
+        void Insert_Header(const std::unordered_map<std::string, std::string>& headers);/* 插入请求头 */
     public:
         void Set_Website(const std::string& website);    /* 设置目标网址 */
         void Set_TxData(const std::string& txData);     /* 设置发送数据 */

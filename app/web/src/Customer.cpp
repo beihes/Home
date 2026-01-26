@@ -74,11 +74,11 @@ void Customer::SetData()
     Url midUrl;
     midUrl.SetUrl("http://jwqywx.cczu.edu.cn:8180/api/login");
     midUrl.InsertHeader("content-type","application/json;charset=UTF-8");
-    midUrl.InsertHeader("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8");
+    // midUrl.InsertHeader("Accept-Language", "zh-CN,zh;q=0.9,en;q=0.8");
     midUrl.InsertHeader("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
     // midUrl.InsertHeader("Origin", "http://jwqywx.cczu.edu.cn");
     // midUrl.InsertHeader("Referer", "http://jwqywx.cczu.edu.cn/");
-    midUrl.InsertHeader("Accept", "application/json, text/plain, */*");
+    // midUrl.InsertHeader("Accept", "application/json, text/plain, */*");
     midUrl.jsonData["userid"] = this->name;
     midUrl.jsonData["userpwd"] = this->password;
     midUrl.Perform();

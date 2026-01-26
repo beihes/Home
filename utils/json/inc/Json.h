@@ -12,6 +12,7 @@ extern "C"
 #endif // __cplusplus
 
 #include <string>
+#include <string_view>
 #include "JsonView.h"
 #include "JsonViewConst.h"
 #include <iostream>
@@ -19,13 +20,8 @@ extern "C"
 #define JSON_PRINT(expr) (expr).print(#expr)
 
 namespace utils::json {
-    /// @brief cJSON初始化函数
-    inline void cJSON_Init() noexcept {
-        cJSON_Hooks hooks;
-        hooks.malloc_fn = SDL_malloc;
-        hooks.free_fn = SDL_free;
-        cJSON_InitHooks(&hooks);
-    }
+    /* @brief cJSON初始化函数 */
+    void Init() noexcept;
 
     class Json {
     public:

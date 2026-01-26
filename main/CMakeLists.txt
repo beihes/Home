@@ -5,7 +5,6 @@ project("main")
 
 find_package(CURL REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
-find_package(fmt CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(SDL3 CONFIG REQUIRED)
 find_package(SDL3_image CONFIG REQUIRED)
@@ -30,5 +29,5 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     app engine utils
-    CURL::libcurl EnTT::EnTT fmt::fmt imgui::imgui
+    CURL::libcurl EnTT::EnTT imgui::imgui
     SDL3::SDL3 $<IF:$<TARGET_EXISTS:SDL3_image::SDL3_image-shared>,SDL3_image::SDL3_image-shared,SDL3_image::SDL3_image-static>  SDL3_ttf::SDL3_ttf)

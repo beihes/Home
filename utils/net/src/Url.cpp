@@ -63,6 +63,12 @@ namespace utils::net {
         this->header_ = curl_slist_append(this->header_, midStr.c_str());
     }
 
+    void Url::Insert_Header(const std::unordered_map<std::string, std::string>& headers) {
+        for (const auto& [key, value] : headers) {
+            this->Insert_Header(key, value);
+        }
+    }
+
     void Url::Set_Website(const std::string& website) {
         this->website_.clear();
         this->website_ = website;

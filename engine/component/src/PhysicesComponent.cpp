@@ -38,13 +38,11 @@ namespace engine::component {
     }
 
     void PhysicsComponent::Clean() {
-        if (!B2_IS_NULL(bodyId_))
-        {
+        if (!B2_IS_NULL(bodyId_)) {
             b2DestroyBody(bodyId_);
             bodyId_ = b2_nullBodyId;
         }
-        if (this->physicsEngine_)
-        {
+        if (this->physicsEngine_) {
             this->physicsEngine_->UnregisterComponent(this);
         }
         log::Trace("[{}]物理组件清理完成。", this->GetClassName());

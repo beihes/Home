@@ -23,7 +23,6 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 
 find_package(box2d CONFIG REQUIRED)
 find_package(EnTT CONFIG REQUIRED)
-find_package(fmt CONFIG REQUIRED)
 find_package(imgui CONFIG REQUIRED)
 find_package(SDL3 CONFIG REQUIRED)
 find_package(SDL3_image CONFIG REQUIRED)
@@ -31,7 +30,7 @@ find_package(SDL3_ttf CONFIG REQUIRED)
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
     utils
-    box2d::box2d EnTT::EnTT fmt::fmt imgui::imgui
+    box2d::box2d EnTT::EnTT imgui::imgui
     SDL3::SDL3 $<IF:$<TARGET_EXISTS:SDL3_image::SDL3_image-shared>,SDL3_image::SDL3_image-shared,SDL3_image::SDL3_image-static> SDL3_ttf::SDL3_ttf)
 
 # TODO: 如有需要，请添加测试并安装目标。

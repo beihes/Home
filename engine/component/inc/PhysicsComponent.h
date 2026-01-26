@@ -16,11 +16,11 @@ extern "C" {
 #include <box2d/box2d.h>
 
 namespace engine::object {
-	class Object;
+    class Object;
 }
 
 namespace engine::physics {
-	class PhysicsEngine;
+    class PhysicsEngine;
 }
 
 // using namespace utils::rect;

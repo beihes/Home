@@ -17,6 +17,8 @@
 #include <entt/entt.hpp>
 #include "web/inc/Customer.h"
 #include "utils/net/inc/Net.h"
+#include "app/school/inc/Snake.h"
+#include "app/school/inc/Student.h"
 
 using namespace utils;
 
@@ -28,9 +30,8 @@ namespace app::scene {
 
     void AppScene::Init() {
         // net::Test();
-        // Customer midCustomer("2201150114", "296414");
-        // midCustomer.SetSchedule("25-26-1");
-        // midCustomer.SetData();
+        school::Student midStudent("2201150114", "296414");
+        midStudent.GetData_FormWeb();
         if (!this->InitLevel())
         {
             log::Error("[{}]场景初始化失败：关卡加载失败", this->GetClassName());

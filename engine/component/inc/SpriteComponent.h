@@ -58,7 +58,7 @@ namespace engine::component {
     public:
         void SetSpriteById(const std::string& textureId, const std::optional<SDL_FRect>& sourceRectOpt = std::nullopt);
         void SetFlipped(bool isFlipped) { this->sprite_.SetFlipped(isFlipped); }
-        void SetHidden(bool isHidden) { this->isHidden_=isHidden; }
+        void SetHidden(bool isHidden) { this->isHidden_ = isHidden; }
         void SetSourceRect(const std::optional<SDL_FRect>& sourceRectOpt);
         void SetAlignment(utils::Alignment anchor);
     private:

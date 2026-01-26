@@ -12,12 +12,14 @@ namespace utils::net {
         if (initState) return true;
         CURLcode code = curl_global_init_mem(CURL_GLOBAL_DEFAULT, SDL_malloc, SDL_free, SDL_realloc, SDL_strdup, SDL_calloc);
         initState = true;
+        log::Trace("net模块初始化完成");
         return code == CURLE_OK;
     }
 
     void Close() {
         if (!initState) return;
         curl_global_cleanup();
+        log::Trace("net模块清理完成");
     }
 
     bool Test() {
